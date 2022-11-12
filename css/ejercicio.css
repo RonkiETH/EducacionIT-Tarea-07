@@ -1,0 +1,56 @@
+body {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 15px;
+    width: 90%;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+#consigna {
+    color: darkslategrey;
+    border-bottom: 1px solid;
+    margin-bottom: 10px;
+}
+
+input,
+button {
+    border: 1px solid darkslategrey;
+    border-radius: 3px;
+    padding: 7px;
+}
+
+:is(input, button):focus,
+:is(input, button):hover {
+    background-color: darkslategrey;
+    color: #fff;
+}
+
+textarea:focus,
+textarea:hover {
+    background-color: #dff2f2;
+}
+
+textarea,
+#destino {
+    min-height: 100px;
+    padding: 5px;
+    margin: 20px 0;
+    border: 1px solid #333;
+    width: 100%;
+}
+
+#origen {
+    display: block;
+    resize: vertical;
+}
+
+#destino {
+    background-color: #f2f2f2;
+    max-height: 250px;
+    overflow: auto;
+}
+
+label[for="origen"] {
+    font-size: 1.5em;
+    font-weight: bold;
+}

@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio</title>
+    <link rel="stylesheet" href="css/ejercicio.css">
+</head>
+<body>
+    <script src="js/main.js"></script>
+    
+    <h1>Ejercicio</h1>
+
+    <section id="consigna">
+
+        <h2>Consigna</h2>
+        <ol>
+            <li>
+                El único archivo que deben modificar es el archivo js/main.js. No se permite modificar este archivo HTML, sin excepción.
+            </li>
+
+            <li>
+                A través de un callback asociado al evento DOMContentLoaded de document, escribir en la consola el texto "Contenido del DOM cargado".
+            </li>
+
+            <li>
+                Cargar desde JS el value del textarea con el siguiente contenido:
+                <br>
+                <!-- Atención, no copiar esto: -->
+                <strong>&lt;p&gt;Este contenido &lt;strong&gt;está listo&lt;/strong&gt;&lt;br&gt;para ser editado y pasarlo abajo.&lt;/p&gt;</strong>
+                <!--
+                    No copien el código anterior desde aquí, ya que estarán copiando las entidades HTML &lt; y &gt;.
+                    Copien en su lugar el contenido directamente desde el navegador o desde la siguiente línea:
+                    <p>Este contenido <strong>está listo</strong><br>para ser editado y pasarlo abajo.</p>
+                -->
+            </li>
+
+            <li>
+                Cuando se dispare el evento input del textarea, obtener un HTMLCollection con todos los &lt;input&gt; de la página y cambiar a false su propiedad disabled para que los mismos dejen de estar deshabilitados. Hacer lo mismo con el botón que falta.
+            </li>
+
+            <li>
+                Programar los 5 botones superiores para que cumplan estas funciones:
+                <ol type="a">
+                    <li>Botón &quot;Reemplazar&quot;: reemplaza el contenido del div destino por el contenido del textarea origen.</li>
+                    <li>Botón &quot;Agregar&quot;: agrega el contenido del textarea origen al contenido del div destino.</li>
+                    <li>Botón &quot;Agregar 5 veces&quot;: agrega 5 veces el contenido del textarea origen al contenido del div destino.</li>
+                    <li>Botón &quot;Agregar 10 veces&quot;: agrega 10 veces el contenido del textarea origen al contenido del div destino.</li>
+                    <li>Botón &quot;Agregar n veces&quot;: agrega la cantidad de veces que indique el usuario (a partir de un prompt) el contenido del textarea origen al contenido del div destino.</li>
+                </ol>
+            </li>
+
+            <li>
+                Programar los 3 botones inferiores para que cumplan estas funciones:
+                <ol type="a">
+                    <li>Botón &quot;Vaciar&quot;: vacía el contenido del div destino.</li>
+                    <li>Botón &quot;Convertir a mayúsculas&quot;: convierte en mayúsculas el contenido del div destino.</li>
+                    <li>Botón &quot;Convertir a minúsculas&quot;: convierte en minúsculas el contenido del div destino.</li>
+                </ol>
+            </li>
+
+            <li>
+                Una vez terminados los puntos anteriores, obtener un HTMLCollection con todos los &lt;li&gt; de la página y agregar al inicio de su contenido el texto &quot;[Ok] &quot;.
+            </li>
+        </ol>
+
+    </section>
+
+    <label for="origen">Origen:</label>
+    <textarea id="origen" placeholder="Editame..." autofocus></textarea>
+    
+    <input type="button" id="btn-reemplazar" disabled value="Reemplazar">
+    <input type="button" class="btn-agregar" disabled value="Agregar">
+    <input type="button" class="btn-agregar" disabled value="Agregar 5 veces">
+    <input type="button" class="btn-agregar" disabled value="Agregar 10 veces">
+    <input type="button" class="btn-agregar" disabled value="Agregar n veces">
+    
+    <h2>Destino:</h2>
+    <div id="destino"></div>
+
+    <input type="button" class="btn-vaciar" disabled value="Vaciar">
+    <input type="button" class="btn-convertir-a-mayusculas" disabled value="Convertir a mayúsculas">
+    <button type="button" disabled>Convertir a minúsculas</button>
+    
+    
+</body>
+</html>
